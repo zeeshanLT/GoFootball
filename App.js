@@ -1,9 +1,9 @@
 import React, {Component} from 'react';
 import {StyleSheet, View, Text, TouchableOpacity,} from 'react-native';
 import {createStackNavigator,} from 'react-navigation';
-// import store from 'GoFootball/store';
-// import HomePage from 'GoFootball/components/homePage';
-// import { Provider } from 'react-redux';
+import store from 'GoFootball/store';
+import HomePage from 'GoFootball/components/homePage';
+import { Provider } from 'react-redux';
 
 const RootStack =  createStackNavigator(
   {
