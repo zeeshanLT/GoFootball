@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import {StyleSheet, View, Text, TouchableOpacity,} from 'react-native';
-// import Body from 'GoFootball/components/shared/body';
-// import DayCard from 'GoFootball/components/homePage/dayCard';
+import Body from 'GoFootball/components/shared/body';
+import DayCard from 'GoFootball/components/homePage/dayCard';
 
 type Props = {};
 export default class HomePage extends Component<Props> {
@@ -11,7 +11,10 @@ export default class HomePage extends Component<Props> {
 
   render() {
     return (
-        <Text>-</Text>
+      <Body>
+        <DayCard/>
+        <DayCard/>
+      </Body>   
     );
   }
 }

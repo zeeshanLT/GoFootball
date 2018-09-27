@@ -10,9 +10,16 @@ export default class LeagueTitle extends Component<Props> {
   render() {
   	var today = new Date();
     return (
-    	<Text>
-    		-
+    	<Text style={styles.title}>
+    		{this.props.title}
     	</Text>
     );
   }
 }
+const styles = StyleSheet.create({
+  title: {
+    fontWeight: '500',
+    marginBottom: 5,
+    padding: 5,
+  }
+});

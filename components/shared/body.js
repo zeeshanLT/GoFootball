@@ -16,15 +16,15 @@ export default class Body extends Component<Props> {
 const win = Dimensions.get('window');
 const styles = StyleSheet.create({
   scroll: {
-    padding: 10,
+    // padding: 10,
     margin: 2,
     overflow: 'hidden',
-    // height: win.height - 91,
+    height: win.height,
   },
   container: {
     flex:1,
     flexDirection:'column',
     justifyContent:'center',
-    backgroundColor: '#fff',
+    backgroundColor: '#ccc',
   }
 });
