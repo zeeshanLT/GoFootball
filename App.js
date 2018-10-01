@@ -4,13 +4,15 @@ import {createStackNavigator,} from 'react-navigation';
 import store from 'GoFootball/store';
 import HomePage from 'GoFootball/components/homePage';
 import { Provider } from 'react-redux';
+import GamePage from 'GoFootball/components/gamePage';
 
 const RootStack =  createStackNavigator(
   {
-    Home: HomePage,
+    HomePage: HomePage,
+    GamePage: GamePage,
   },
   {
-    initialRouteName: 'Home',
+    initialRouteName: 'HomePage',
     navigationOptions: ({navigation})=>{
       return {  
         headerTitle: navigation.getParam('title','GoFootball') ,

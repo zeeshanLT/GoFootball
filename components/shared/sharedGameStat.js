@@ -2,24 +2,26 @@ import React, {Component} from 'react';
 import {StyleSheet, View, Text, TouchableOpacity,} from 'react-native';
 
 type Props = {};
-export default class AGameStat extends Component<Props> {
+export default class SharedGameStat extends Component<Props> {
   constructor(props){
     super(props);
   }
 
   render() {
+    var left = this.props.left;
+    var right = this.props.right;
     return (
       <View style={styles.container} >
         <Text style={styles.text}>
-        	{this.props.data.teamA}
+        	{left}
         </Text>
         <View style={styles.score}>
 	        <Text style={styles.scoreText}>
-	        	{this.props.data.scoreA}:{this.props.data.scoreB}
+	        	{this.props.center}
 	        </Text>
-	    </View>
+	      </View>
         <Text style={styles.text}>
-        	{this.props.data.teamB}
+        	{right}
         </Text>
       </View>
     );
@@ -30,8 +32,9 @@ const styles = StyleSheet.create({
   container: {
   	flexDirection: 'row',
   	justifyContent: 'space-between',
-  	paddingTop: 8,
-  	paddingBottom: 8,
+  	// paddingTop: 8,
+  	// paddingBottom: 8,
+    padding: 8,
   	marginTop:3,
   	marginBottom: 3 
   },
@@ -50,7 +53,6 @@ const styles = StyleSheet.create({
   	paddingLeft: 5,
   	paddingRight: 5,
   	backgroundColor: '#eee',
-  	fontSize: 16,
-  	color: '#000',
+  	color: '#888',
   }
 });
