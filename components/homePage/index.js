@@ -12,7 +12,7 @@ class HomePage extends Component<Props> {
   }
   componentWillMount(){
     this.props.navigation.setParams({title: 'GoFootball'});
-    this.props.getOneDayStat('TODAY');
+    // this.props.getOneDayStat('TODAY');
     this.props.getOneDayStat('YESTERDAY');
     // this.props.getOneDayStat('TOMORROW');
   }
@@ -20,7 +20,7 @@ class HomePage extends Component<Props> {
     return (
       <Body>
         <DayCard data={this.props.yesterdayData} navigation={this.props.navigation} title="Yesterday"/>
-        <DayCard data={this.props.todayData} navigation={this.props.navigation} title="Today"/>
+        {/*<DayCard data={this.props.todayData} navigation={this.props.navigation} title="Today"/>*/}
         {/*<DayCard data={this.props.tomorrowData} navigation={this.props.navigation} title="Tomorrow"/>*/}
       </Body>
     );

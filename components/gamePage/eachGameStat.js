@@ -10,12 +10,19 @@ export default class EachGameStat extends Component<Props> {
   constructor(props){
     super(props);
   }
-
+  getPercentage = (x,a,b)=>{
+    return ((x/(a+b))*100)+'%';
+  }
   render() {
+    var teamA = this.props.data.game.teams[0].stats;
+    var teamB = this.props.data.game.teams[1].stats;
+    var key = this.props.data.key;
+    var leftWidth = this.getPercentage(teamA[key].total, teamB[key].total,teamA[key].total);
+    var rightWidth = this.getPercentage(teamB[key].total, teamB[key].total,teamA[key].total);
     return (
       <View>
-        <SharedGameStat left={this.props.data.left} center={this.props.data.center} right={this.props.data.right}/>
-        <SharedBarStat leftWidth={this.props.data.leftWidth} rightWidth={this.props.data.rightWidth}/>
+        <SharedGameStat left={teamA[key].total} center={this.props.data.center} right={teamB[key].total}/>
+        <SharedBarStat leftWidth={leftWidth} rightWidth={rightWidth}/>
       </View>
     );
   }
