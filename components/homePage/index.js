@@ -12,19 +12,25 @@ class HomePage extends Component<Props> {
   }
   componentWillMount(){
     this.props.navigation.setParams({title: 'GoFootball'});
-    this.props.getOneDayStat();
+    this.props.getOneDayStat('TODAY');
+    this.props.getOneDayStat('YESTERDAY');
+    this.props.getOneDayStat('TOMORROW');
   }
   render() {
     return (
       <Body>
-        <DayCard data={this.props.data} title="Today"/>
+        <DayCard data={this.props.yesterdayData} title="Yesterday"/>
+        <DayCard data={this.props.todayData} title="Today"/>
+        <DayCard data={this.props.tomorrowData} title="Tomorrow"/>
       </Body>
     );
   }
 }
 
 const mapStateToProps = (state)=>({
-  data: state.stats.data
+  todayData: state.stats.today,
+  tomorrowData: state.stats.tomorrow,
+  yesterdayData: state.stats.yesterday
 });
 
 export default connect(mapStateToProps,{getOneDayStat})(HomePage);

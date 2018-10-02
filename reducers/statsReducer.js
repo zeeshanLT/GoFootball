@@ -1,14 +1,26 @@
 const initialState = {
-  data: [],
+  today: [],
+  yesterday: [],
+  tomorrow: []
 };
 
 export default function(state = initialState, action) {
   switch (action.type) {
     
-    case 'STAT_FETCH':
+    case 'TODAY':
     return {
       ...state,
-      data: action.payload
+      today: action.payload
+    };
+    case 'YESTERDAY':
+    return {
+      ...state,
+      yesterday: action.payload
+    };
+    case 'TOMORROW':
+    return {
+      ...state,
+      tomorrow: action.payload
     };
     default:
       return state;
