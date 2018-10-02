@@ -10,8 +10,6 @@ export default class DayCard extends Component<Props> {
   constructor(props){
     super(props);
   }
-  componentWillMount(){
-  }
   render() {
     var data = this.props.data;
     var eachLeague = [];

@@ -30,6 +30,7 @@ export default class GamesContainer extends Component<Props> {
               left={left}
               right={right}
               center={game.teams[0].score != null?game.teams[0].score+":"+game.teams[1].score:game.date.substring(11,16)}
+              shadedTitle={true}
             />
           </TouchableOpacity>
         );

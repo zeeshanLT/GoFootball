@@ -56,17 +56,17 @@ export default class GameStatsPage extends Component<Props> {
               game: this.props.data,
               key: 'SHOT_OFF_TARGET',
             }}/>
-            <EachGameStat key={this.props.data.id} data={{
+            <EachGameStat key={teamA.ATTEMPTS_IBOX.id} data={{
               center: 'Shots- inside the box',
               game: this.props.data,
               key: 'ATTEMPTS_IBOX',
             }}/>
-            <EachGameStat key={this.props.data.id} data={{
+            <EachGameStat key={teamB.ATTEMPTS_OBOX.id} data={{
               center: 'Shots- outside the box',
               game: this.props.data,
               key: 'ATTEMPTS_OBOX',
             }}/>
-            <EachGameStat key={this.props.data.id} data={{
+            <EachGameStat key={teamA.TOTAL_YEL_CARD.id} data={{
               center: 'Yellow Cards',
               game: this.props.data,
               key: 'TOTAL_YEL_CARD',
