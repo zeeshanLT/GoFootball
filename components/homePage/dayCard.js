@@ -29,7 +29,7 @@ export default class DayCard extends Component<Props> {
         //league is an array of objects of individual matches in a particualar competition 
         return (
           <SharedCard key={league[0].id} title={league[0].competitionName}>
-            <GamesContainer league= {league}/>
+            <GamesContainer navigation={this.props.navigation} league= {league}/>
           </SharedCard>
         );
       });

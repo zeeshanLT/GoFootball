@@ -14,8 +14,8 @@ export default class EachGameStat extends Component<Props> {
   render() {
     return (
       <View>
-        <SharedGameStat left={this.props.left} right={this.props.right} center={this.props.center}/>
-        <SharedBarStat/>
+        <SharedGameStat left={this.props.data.left} center={this.props.data.center} right={this.props.data.right}/>
+        <SharedBarStat leftWidth={this.props.data.leftWidth} rightWidth={this.props.data.rightWidth}/>
       </View>
     );
   }

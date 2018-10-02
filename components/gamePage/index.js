@@ -13,7 +13,7 @@ export default class GamePage extends Component<Props> {
   render() {
     return (
       <Body>
-        <GameStatsPage/>
+        <GameStatsPage data={this.props.navigation.getParam('data')} navigation={this.props.navigation}/>
       </Body>   
     );
   }

@@ -12,10 +12,10 @@ export default class SharedBarStat extends Component<Props> {
     return (
       <View style={styles.container}>
         <View style={styles.base}>
-          <View style={{...styles.stat,right: 0}}/>
+          <View style={{...styles.stat,right: 0, width:this.props.leftWidth}}/>
         </View>
         <View style={styles.base}>
-          <View style={{...styles.stat,left:0}}/>
+          <View style={{...styles.stat,left:0, width:this.props.rightWidth}}/>
         </View>
       </View>
     );
@@ -37,7 +37,6 @@ const styles = StyleSheet.create({
   stat: {
     position: 'absolute',
     top: 0,
-    width: '80%',
     height: '100%',
     backgroundColor: '#666',
     flex: 1,

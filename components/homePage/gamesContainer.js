@@ -18,13 +18,20 @@ export default class GamesContainer extends Component<Props> {
         left = game.teams[0].teamName != null? game.teams[0].teamName.length > 16?game.teams[0].teamName.substring(0,14)+'..':game.teams[0].teamName:'' ;
         right = game.teams[1].teamName != null? game.teams[1].teamName.length > 16?game.teams[1].teamName.substring(0,14)+'..':game.teams[1].teamName:'' ;
         return (
-          <SharedGameStat
-            key = {game.id}
-            game={game}
-            left={left}
-            right={right}
-            center={game.teams[0].score != null?game.teams[0].score+":"+game.teams[1].score:game.date.substring(11,16)}
-          />
+          <TouchableOpacity key = {game.id} onPress={()=>{
+            if(game.teams[0].score != null){
+              this.props.navigation.navigate('GamePage',{
+                data: game
+              });
+            }
+          }}>
+            <SharedGameStat
+              game={game}
+              left={left}
+              right={right}
+              center={game.teams[0].score != null?game.teams[0].score+":"+game.teams[1].score:game.date.substring(11,16)}
+            />
+          </TouchableOpacity>
         );
       });
     }
