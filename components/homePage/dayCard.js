@@ -44,7 +44,7 @@ export default class DayCard extends Component<Props> {
 const styles = StyleSheet.create({
   container: {
     padding: 10,
-    backgroundColor: '#eee',
+    backgroundColor: '#d2eafc',
     marginBottom: 4,
     marginTop: 8,
   }

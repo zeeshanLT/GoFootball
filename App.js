@@ -17,12 +17,12 @@ const RootStack =  createStackNavigator(
       return {  
         headerTitle: navigation.getParam('title','GoFootball') ,
         headerStyle: {
-          backgroundColor: '#fff',
+          backgroundColor: '#2196f3',
         },
-        headerTintColor: '#454343',
+        headerTintColor: '#fff',
         headerTitleStyle: {
           fontWeight: 'bold',
-          color: '#454343'
+          color: '#fff'
         },
       }
     },

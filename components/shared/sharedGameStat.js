@@ -12,7 +12,7 @@ export default class SharedGameStat extends Component<Props> {
     var right = this.props.right;
     setBackground =()=>{
       if(this.props.shadedTitle == true){
-        return {backgroundColor: '#eee'}
+        return {backgroundColor: '#fff'}
       }else{
         return {backgroundColor: 'transparent'}
       }

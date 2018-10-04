@@ -37,9 +37,14 @@ export default class GamesContainer extends Component<Props> {
       });
     }
     return (
-      <View>
+      <View style ={styles.container}>
         {eachGame}
       </View>
     );
   }
 }
+const styles = StyleSheet.create({
+  // container:{
+  //   backgroundColor: '#00e5ff'
+  // }
+})

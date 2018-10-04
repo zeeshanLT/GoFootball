@@ -23,12 +23,12 @@ export default class DayCard extends Component<Props> {
 const styles = StyleSheet.create({
   container: {
     padding: 10,
-    backgroundColor: '#eee',
+    backgroundColor: '#d2eafc',
     marginBottom: 8,
   },
    contentBox: {
     padding: 5,
-    backgroundColor: '#fff',
+    backgroundColor: '#00e5ff',
     borderRadius:3,
   }
 });
