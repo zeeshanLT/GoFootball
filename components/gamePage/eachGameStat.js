@@ -20,6 +20,7 @@ export default class EachGameStat extends Component<Props> {
     var leftWidth = this.getPercentage(teamA[key].total, teamB[key].total,teamA[key].total);
     var rightWidth = this.getPercentage(teamB[key].total, teamB[key].total,teamA[key].total);
     return (
+	{}
       <View>
         <SharedGameStat shadedTitle={false} left={teamA[key].total} center={this.props.data.center} right={teamB[key].total}/>
         <SharedBarStat leftWidth={leftWidth} rightWidth={rightWidth}/>
